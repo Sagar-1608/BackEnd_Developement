@@ -1,5 +1,4 @@
 
-
 //server instantiate
 const express = require('express');
 //take rexpress as app for use
@@ -30,4 +29,27 @@ app.post('/api/car',(request,response)=>{
     console.log(brand);
     response.send("Car responce send succesfully");
 })
+
+
+//connect b to mongose 
+
+const mongoose =require('mongoose');
+
+mongoose.connect("mongodb://127.0.0.1:27017/myDatabase",{
+    useNewUrlParser:true,
+    useUnifiedTopology:true
+}
+// ,(err)=>{
+//     if(err)
+//     {
+//         console.log(err);
+//     }else{
+
+//         console.log("success")
+//     }
+// }
+)
+.then(()=>{console.log("connection Successfully")})
+.catch((error)=>{console.log(error)}); 
+
 
