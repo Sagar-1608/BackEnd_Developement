@@ -20,6 +20,8 @@
             }
         );
 
+        console.log("Data added successfully")
+
     }
     catch(err){
         console.error(err);
