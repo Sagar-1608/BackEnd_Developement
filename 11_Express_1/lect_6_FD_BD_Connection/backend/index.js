@@ -17,7 +17,7 @@ app.use(express.json());
 app.use("/api/v1", userRoutes);
 
 // CORS Configuration
-app.listen(PORT, () => {
+app.listen(PORT , () => {
   console.log(`THE SERVER IS UP AND RUNNING AT PORT ${PORT}`);
 });
 
